@@ -8,9 +8,17 @@
 
 import UIKit
 
-class ColorTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ColorTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var colors = ["red","orange","yellow","green","blue","purple","brown"]
+    var colors = [Colors(name: "Red", uiColor: UIColor.red),
+                  Colors(name: "Orange", uiColor: UIColor.orange),
+                  Colors(name: "Yellow", uiColor: UIColor.yellow),
+                  Colors(name: "Green", uiColor: UIColor.green),
+                  Colors(name: "Blue", uiColor: UIColor.blue),
+                  Colors(name: "Purple", uiColor: UIColor.purple),
+                  Colors(name: "Brown", uiColor: UIColor.brown)]
+    
+    @IBOutlet weak var colorsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +36,21 @@ class ColorTableViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath)
         
-        cell.textLabel?.text = colors[indexPath.row]
+        cell.textLabel?.text = colors[indexPath.row].name
+        cell.backgroundColor = colors[indexPath.row].uiColor
         
         return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isSelected = false
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ColorDetailViewController,
+            let row = colorsTableView.indexPathForSelectedRow?.row{
+            destination.colors = colors[row]
+        }
+    }
 
 }
