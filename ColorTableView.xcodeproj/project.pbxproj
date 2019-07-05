@@ -14,6 +14,8 @@
 		496FCC5B22C6719A0081F8C1 /* ColorTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FCC5A22C6719A0081F8C1 /* ColorTableViewTests.swift */; };
 		496FCC6622C6719A0081F8C1 /* ColorTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FCC6522C6719A0081F8C1 /* ColorTableViewUITests.swift */; };
 		496FCC7622C672800081F8C1 /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FCC7522C672800081F8C1 /* ColorTableViewController.swift */; };
+		497495CC22CFD796006FD434 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497495CB22CFD796006FD434 /* File.swift */; };
+		497495CE22CFDAA7006FD434 /* ColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497495CD22CFDAA7006FD434 /* ColorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		496FCC6522C6719A0081F8C1 /* ColorTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewUITests.swift; sourceTree = "<group>"; };
 		496FCC6722C6719A0081F8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		496FCC7522C672800081F8C1 /* ColorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
+		497495CB22CFD796006FD434 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		497495CD22CFDAA7006FD434 /* ColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				496FCC4C22C6719A0081F8C1 /* Assets.xcassets */,
 				496FCC4E22C6719A0081F8C1 /* LaunchScreen.storyboard */,
 				496FCC5122C6719A0081F8C1 /* Info.plist */,
+				497495CB22CFD796006FD434 /* File.swift */,
+				497495CD22CFDAA7006FD434 /* ColorDetailViewController.swift */,
 			);
 			path = ColorTableView;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				496FCC4622C671990081F8C1 /* AppDelegate.swift in Sources */,
+				497495CC22CFD796006FD434 /* File.swift in Sources */,
 				496FCC7622C672800081F8C1 /* ColorTableViewController.swift in Sources */,
+				497495CE22CFDAA7006FD434 /* ColorDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
