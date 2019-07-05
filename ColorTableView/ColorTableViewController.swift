@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ColorTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var colors = ["red","orange","yellow","green","blue","purple","brown"]
     
