@@ -10,6 +10,9 @@ import UIKit
 
 class ColorTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+<<<<<<< HEAD
+    var colors = ["red","orange","yellow","green","blue","purple","brown"]
+=======
     var colors = [Colors(name: "Red", uiColor: UIColor.red),
                   Colors(name: "Orange", uiColor: UIColor.orange),
                   Colors(name: "Yellow", uiColor: UIColor.yellow),
@@ -19,6 +22,7 @@ class ColorTableViewController: UIViewController, UITableViewDataSource, UITable
                   Colors(name: "Brown", uiColor: UIColor.brown)]
     
     @IBOutlet weak var colorsTableView: UITableView!
+>>>>>>> 8bcf937203a5a60008436ff65843a729ec17b1b9
     
     override func viewDidLoad() {
         super.viewDidLoad()
